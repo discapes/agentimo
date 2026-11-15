@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#ffffff">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Agentimo">
+<link rel="manifest" href="/static/manifest.webmanifest">
+<link rel="apple-touch-icon" href="/static/icon.png">
+<link rel="stylesheet" href="/static/chef.css">
+<title>Agentimo</title>
+</head>
+<body>
+<header>
+  <div class="mark"></div><h1>Agentimo</h1>
+</header>
+<main>
+  <div class="thread"></div>
+  <section class="empty">
+    <h2>What do you need?</h2>
+    <ul class="suggest">
+      <li><button data-ex="usual"><b>“Get the usual dill and lemons for tomorrow.”</b><span>Your usual amounts, so Agentimo orders it straight away</span></button></li>
+      <li><button data-ex="salmon"><b>“We need 25 kilos of salmon for Monday.”</b><span>Your usual salmon can't come Monday and your rules say never swap it, so it asks you first</span></button></li>
+      <li class="verify"><button data-ex="tricked"><b>The verifier steps in</b><span>Your usual milk, but a manipulated agent slips in 40 kg of butter you never asked for</span></button></li>
+    </ul>
+    <p class="rules-summary"></p>
+  </section>
+</main>
+<footer>
+  <form class="typed hidden"><input name="text" autocomplete="off" placeholder="Type an order"><button>Send</button></form>
+  <div class="controls">
+    <button class="kbd" aria-label="Type instead"><svg viewBox="0 0 24 24"><rect x="2.5" y="6" width="19" height="12" rx="2.5"/><path d="M6.5 10h1M10 10h1M13.5 10h1M17 10h.5M7.5 14h9"/></svg></button>
+    <button class="mic" aria-label="Speak">
+      <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"><rect x="9" y="2.5" width="6" height="12" rx="3" fill="#fff"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3.5"/></svg></span>
+      <span class="rec"><span class="time">0:00</span><span class="wave"></span><span class="stop"></span></span>
+      <span class="spin"></span>
+    </button>
+    <button class="kbd restart" aria-label="Start over" title="Start over"><svg viewBox="0 0 24 24"><path d="M4.5 12a7.5 7.5 0 1 0 2.2-5.3"/><path d="M4.5 3.5v4h4"/></svg></button>
+  </div>
+</footer>
+<div class="sheet hidden">
+  <form>
+    <h2>Your rules</h2>
+    <label>Rules for every order<textarea name="rules" rows="5"></textarea></label>
+    <div class="row">
+      <label>Orders alone up to €<input name="auto" inputmode="numeric"></label>
+      <label>Never more than €<input name="max" inputmode="numeric"></label>
+    </div>
+    <button class="save">Save and sign</button>
+    <button type="button" class="cancel">Cancel</button>
+  </form>
+</div>
+<script type="module" src="/static/chef.js"></script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/static/room.css">
+<title>Agentimo · behind the order</title>
+</head>
+<body>
+<div class="stage">
+  <svg class="diagram" viewBox="0 0 680 785" preserveAspectRatio="xMidYMid meet"></svg>
+  <aside>
+    <nav>
+      <button data-tab="live" class="on">Live</button>
+      <button data-tab="attacks">Attack lab</button>
+      <button data-tab="orders">Orders</button>
+    </nav>
+    <section class="tab live on">
+      <div class="decisions hidden">
+        <h2>Gemini Decisions</h2>
+        <ul class="answers"></ul>
+        <div class="stats"></div>
+      </div>
+      <h2 class="feed-title">Events</h2>
+      <ol class="feed"></ol>
+    </section>
+    <section class="tab attacks">
+      <h2>Attack lab</h2>
+      <ul class="attack-list"></ul>
+    </section>
+    <section class="tab orders">
+      <h2>Orders at Valio Aimo</h2>
+      <ul class="order-list"></ul>
+    </section>
+  </aside>
+</div>
+<script type="module" src="/static/room.js"></script>
+</body>
+</html>
